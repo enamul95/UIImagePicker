@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk1-0E-KuI">
+                                <rect key="frame" x="20" y="742" width="177" height="60"/>
+                                <color key="backgroundColor" red="0.035365812480000001" green="0.47061526780000001" blue="0.88224905730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Vkw-VH-Fff"/>
+                                </constraints>
+                                <state key="normal" title="Photo Galary">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPhotGalary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGR-YM-KPd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHN-DE-2IK">
+                                <rect key="frame" x="217" y="742" width="177" height="60"/>
+                                <color key="backgroundColor" red="0.2234986424" green="0.54512697460000004" blue="0.84303623439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Capture Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5h-D7-Hc0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Wb-Bd-QeC">
+                                <rect key="frame" x="50" y="144" width="314" height="538"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CHN-DE-2IK" secondAttribute="trailing" constant="20" id="7cW-aV-WZb"/>
+                            <constraint firstItem="9Wb-Bd-QeC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="H5g-X4-yyk"/>
+                            <constraint firstItem="CHN-DE-2IK" firstAttribute="leading" secondItem="Fk1-0E-KuI" secondAttribute="trailing" constant="20" id="KgW-xM-n0e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fk1-0E-KuI" secondAttribute="bottom" constant="60" id="NPE-YT-I77"/>
+                            <constraint firstItem="CHN-DE-2IK" firstAttribute="centerY" secondItem="Fk1-0E-KuI" secondAttribute="centerY" id="PWE-Wb-UjE"/>
+                            <constraint firstItem="Fk1-0E-KuI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="S2Q-AN-hlh"/>
+                            <constraint firstItem="9Wb-Bd-QeC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Uef-of-9jU"/>
+                            <constraint firstItem="CHN-DE-2IK" firstAttribute="width" secondItem="Fk1-0E-KuI" secondAttribute="width" id="eSn-Kt-aRe"/>
+                            <constraint firstItem="CHN-DE-2IK" firstAttribute="leading" secondItem="Fk1-0E-KuI" secondAttribute="trailing" constant="20" id="f20-Ks-lUc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Wb-Bd-QeC" secondAttribute="trailing" constant="50" id="f4Y-KV-XKk"/>
+                            <constraint firstItem="Fk1-0E-KuI" firstAttribute="top" secondItem="9Wb-Bd-QeC" secondAttribute="bottom" constant="60" id="w5l-M2-hzV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CHN-DE-2IK" secondAttribute="bottom" constant="60" id="xEV-9p-W74"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="9Wb-Bd-QeC" id="v41-F1-3jX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="62"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
